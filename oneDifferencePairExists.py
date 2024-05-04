@@ -33,3 +33,24 @@ def OneDifferencePairExistsWithTrie(listOfWords):
         ans = trie.addWordAndCheckDifference(trie.root, word, 0)
         if ans: return ans
     return False
+
+def OneDifferencePairExists(listOfWords):
+    word_set = set()
+    for word in listOfWords:
+        for i in range(len(word)):
+            for char in 'abcdefghijklmnopqrstuvwxyz':
+                new_word = word[:i] + char + word[i+1:]
+                if new_word in word_set:
+                    return True
+            word_set.add(word)
+    return False
+
+
+listOfWords = ["tarun", "tarub"]
+print(OneDifferencePairExists(listOfWords))
+
+listOfWords = ["tarun", "tarun"]
+print(OneDifferencePairExists(listOfWords))
+
+listOfWords = ["aarun", "tarun"]
+print(OneDifferencePairExists(listOfWords))
