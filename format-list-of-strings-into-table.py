@@ -35,3 +35,4 @@ def formatListOfStringsIntoTable(listOfStrings, maxWidth):
 print(formatListOfStringsIntoTable(["IsAudioBuffer", "GetTimestamp", "SetTimestamp", 
                                     "GetSampleRate", "GetSampleSize", "GetNumberOfChannels", 
                                     "GetNumberOfSamples", "GetDataBuffer", "GetChannel"], 68))
+
