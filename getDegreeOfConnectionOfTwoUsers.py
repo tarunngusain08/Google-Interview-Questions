@@ -74,11 +74,13 @@ graph = Graph()
 for userId in range(0,10,2):
     print(graph.getDegreeOfConnectionOfTwoUsers(users[userId],users[userId+1]), "level connection")
 
-print()
 user10 = Node(10)
 user11 = Node(11)
+user12 = Node(12)
 users[0].connections.append(user10)
+user10.connections.append(user11)
 
+print()
 print(graph.getDegreeOfConnectionOfTwoUsers(users[0], user10), "level connection")
 print(graph.getDegreeOfConnectionOfTwoUsers(users[1], user10), "level connection")
 print(graph.getDegreeOfConnectionOfTwoUsers(users[6], user10), "level connection")
@@ -86,3 +88,7 @@ print(graph.getDegreeOfConnectionOfTwoUsers(users[6], user10), "level connection
 print()
 print(graph.getDegreeOfConnectionOfTwoUsers(users[1], user11), "level connection")
 print(graph.getDegreeOfConnectionOfTwoUsers(users[8], user11), "level connection")
+
+print()
+print(graph.getDegreeOfConnectionOfTwoUsers(users[1], user12), "level connection")
+print(graph.getDegreeOfConnectionOfTwoUsers(users[8], user12), "level connection")
